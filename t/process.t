@@ -9,10 +9,10 @@ my Win32::Performance::FILETIME $kernel;
 my Win32::Performance::FILETIME $user;
 
 $hProcess = GetCurrentProcess;
-$creation = Win32::Performance::FILETIME.new;
-$exit = Win32::Performance::FILETIME.new;
-$kernel = Win32::Performance::FILETIME.new;
-$user = Win32::Performance::FILETIME.new;
+$creation := Win32::Performance::FILETIME.new;
+$exit := Win32::Performance::FILETIME.new;
+$kernel := Win32::Performance::FILETIME.new;
+$user := Win32::Performance::FILETIME.new;
 'start'.say;
 GetProcessTimes(
   $hProcess,

@@ -73,10 +73,10 @@ sub GetCurrentProcessId()
 
 sub GetProcessTimes(
     Win32::Performance::HANDLE   $hProcess,
-    Win32::Performance::LPFILETIME $creation,
-    Win32::Performance::LPFILETIME $exit,
-    Win32::Performance::LPFILETIME $kernel,
-    Win32::Performance::LPFILETIME $user)
+    Win32::Performance::FILETIME $creation,
+    Win32::Performance::FILETIME $exit,
+    Win32::Performance::FILETIME $kernel,
+    Win32::Performance::FILETIME $user)
   #returns bool
   is native('KERNEL32')
   is export
