@@ -11,6 +11,7 @@ my $ftime = Win32::Performance::FILETIME.new;
 }
 {
   GetSystemTimeAsFileTime($ftime);
+  $ftime.say;
   ok 1, 'GetSystemTimeAsFileTime call';
   ok $ftime.dwLowDateTime != 0, 'Check $ftime isn\'t initial';
 }

@@ -3,12 +3,12 @@ module Win32::Performance;
 use NativeCall;
 
 class FILETIME is repr('CStruct') {
-  has uint32 $.dwLowDateTime;
-  has uint32 $.dwHighDateTime;
+  has uint64 $.dwLowDateTime;
+  has uint64 $.dwHighDateTime;
 };
 
 class PVOID  is repr('CPointer') { has num64 $.unused; };
-class HANDLE is repr('CStruct') { has int32 $.unused; };
+class HANDLE is repr('CPointer') { };
   #has str $.machine;  
   #has str $.nmpipe;
 #};
